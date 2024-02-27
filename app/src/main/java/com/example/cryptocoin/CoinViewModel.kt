@@ -43,6 +43,7 @@ class CoinViewModel(application: Application): AndroidViewModel(application) {
             }, {
                 Log.d("ERROR", it.message.toString())
             })
+
     }
 
     private fun getPriceListFromRawData(
