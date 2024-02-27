@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CoinDetailActivity">
+    
+    <ImageView
+        android:id="@+id/ivLogoCoin"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:src= "@mipmap/ic_launcher"
+        />
+    
+    <TextView
+        android:id="@+id/tvFromSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/ivLogoCoin"
+        app:layout_constraintEnd_toStartOf="@id/tvSlash"
+        tools:text= "BTC"
+        />
+
+    <TextView
+        android:id="@+id/tvSlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_margin="16dp"
+        android:textSize="24sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintTop_toBottomOf="@id/ivLogoCoin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text= "/"
+        />
+
+    <TextView
+        android:id="@+id/tvToSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/ivLogoCoin"
+        app:layout_constraintStart_toEndOf="@id/tvSlash"
+        tools:text= "USD"
+        />
+
+    <TextView
+        android:id="@+id/tvPriceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFromSymbol"
+        tools:text="Price" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvFromSymbol"
+        app:layout_constraintStart_toEndOf="@id/tvPriceTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text= "7446,6"
+        />
+
+    <TextView
+        android:id="@+id/tvMinPriceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvPriceTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text= "Minimum of the day:"
+        />
+
+    <TextView
+        android:id="@+id/tvMinPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvPriceTitle"
+        app:layout_constraintStart_toEndOf="@id/tvMinPriceTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text= "7554,2"
+        />
+
+    <TextView
+        android:id="@+id/tvMaxPriceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvMinPriceTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text= "MaxPrice:"
+        />
+
+    <TextView
+        android:id="@+id/tvMaxPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvMinPriceTitle"
+        app:layout_constraintStart_toEndOf="@id/tvMaxPriceTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text= "7554,2:"
+        />
+
+    <TextView
+        android:id="@+id/tvLastDealTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvMaxPriceTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text= "Last deal:"
+        />
+
+    <TextView
+        android:id="@+id/tvLastDeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvMaxPriceTitle"
+        app:layout_constraintStart_toEndOf="@id/tvMaxPriceTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text= "Anywhere"
+        />
+
+    <TextView
+        android:id="@+id/tvUpdatedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLastDealTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text= "Updated"
+        />
+
+    <TextView
+        android:id="@+id/tvUpdated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLastDealTitle"
+        app:layout_constraintStart_toEndOf="@id/tvUpdatedTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text= "11.12.23"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
