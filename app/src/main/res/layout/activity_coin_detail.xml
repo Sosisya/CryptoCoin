@@ -189,6 +189,7 @@
         app:layout_constraintStart_toEndOf="@id/tvUpdatedTitle"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text= "11.12.23"
+
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
